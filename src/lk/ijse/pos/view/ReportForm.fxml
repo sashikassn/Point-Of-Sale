@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="449.0" prefWidth="639.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lk.ijse.pos.controller.ReportFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/pos/view/style/reportform.css" />
+    </stylesheets>
+   <children>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="btnCustomerReport" layoutX="161.0" layoutY="151.0" mnemonicParsing="false" onAction="#onCustomerReportbtnClick" prefHeight="28.0" prefWidth="318.0" style="-fx-background-color: lightblue;" text="Generate Customer Report" />
+      <Button fx:id="btnCustomerReport" layoutX="161.0" layoutY="211.0" mnemonicParsing="false" onAction="#onItemReportGenerateBtn" prefHeight="28.0" prefWidth="318.0" style="-fx-background-color: orange;" text="Generate Item List" />
+      <Label layoutX="91.0" layoutY="23.0" text="Report Viewer">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

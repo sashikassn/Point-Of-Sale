@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PosCustomerReport" pageWidth="595" pageHeight="700" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f10f2c28-a8d1-467d-b077-37ddcc308166">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y3VzdG9tZXIgLDE1LDE1LDMxMWRkYWY4LTljMTUtNGNhOS1hNDdkLTg2NDFmNmViMTY2OTs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PosDatabaseConnection"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM customer]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Immediate">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="228" y="0" width="110" height="30" forecolor="#F2526A" uuid="8ad94887-68c4-434d-87cd-88208387f210"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer List]]></text>
+			</staticText>
+			<image>
+				<reportElement x="480" y="0" width="93" height="30" uuid="6347a1ed-36f3-4a1e-b00e-dd330c3cc7cf"/>
+				<imageExpression><![CDATA["/run/media/slash/7C627B09627AC802/IJSE Complete Projects/Pos Sytem/Point-of-Sales-System-JAVA-FX-/src/lk/ijse/pos/asset/ijse-logo.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="510df78e-01c4-4ab4-8be7-6ff475db6780">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f22fec96-240e-4c33-85ac-31c6ff2d5886"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="7dbc269a-789d-493a-a05d-63fa6743e28d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4da73f0-4561-482f-aa60-a48c90923fc9"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="155" height="30" uuid="313f6e96-522d-4023-bc6a-a3f88d8dd626">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6e6a0a9-808b-4c58-beb3-a7e793cd9e01"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="30" forecolor="#0707AD" uuid="39641415-5bc4-460e-8fd3-8693eae5e350">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f22fec96-240e-4c33-85ac-31c6ff2d5886"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" forecolor="#0707AD" uuid="ca9ca139-570a-4676-85b6-bee81126cafe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4da73f0-4561-482f-aa60-a48c90923fc9"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="155" height="30" forecolor="#0707AD" uuid="fd4b557f-6480-48cd-b004-a5a92cb47a10">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6e6a0a9-808b-4c58-beb3-a7e793cd9e01"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

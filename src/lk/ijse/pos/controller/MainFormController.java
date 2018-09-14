@@ -129,6 +129,7 @@ public class MainFormController implements Initializable {
                     root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/pos/view/PlaceOrderForm.fxml"));
                     break;
                 case "imgReport":
+                    root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/pos/view/ReportForm.fxml"));
                     break;
             }
             
